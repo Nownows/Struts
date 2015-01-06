@@ -2,14 +2,17 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-<title><s:text name="accueil.label"/></title>
+    <title><s:text name="accueil.label"/></title>
 <style type="text/css">@import url(css/styles.css);</style>
 </head>
 <body>
-    bonjour, <%= session.getAttribute("login") %>
+    <h1>bonjour, <%= session.getAttribute("login") %></h1>
 <%--<s:debug/>--%>
-<div id="enveloppe">
+<div id="menuGauche">
     <ul>
+        <li>
+            <s:a action="Home"><s:text name="Accueil"/></s:a>
+        </li>
         <li>
             <s:a action="ShowMessages"><s:text name="Voir les messages"/></s:a>
         </li>
@@ -20,7 +23,6 @@
              <s:a action="ShowAbonnes"><s:text name="Consulter les abonnés"/></s:a>
         </li>
     </ul>
-
 </div>
 </body>
 </html>

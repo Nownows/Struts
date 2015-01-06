@@ -10,6 +10,10 @@
             <result>/identification.jsp</result>
         </action>
         
+        <action name="Home" >
+            <result>/accueil.jsp</result>
+        </action>
+        
         <action name="ShowMessages" >
             <result>/showMessage.jsp</result>
         </action>

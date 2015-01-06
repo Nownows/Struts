@@ -1,8 +1,3 @@
-<%-- 
-    Document   : identification
-    Created on : 11 sept. 2014, 10:14:31
-    Author     : gilles
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
@@ -24,7 +19,6 @@
                 <s:password name="unAbon.mdp" id="mdp" label="Mot de passe" labelposition="top" cssClass="input"/>        
 		<s:submit value="Identification"/>
 	</s:form>  
-        
         <s:a action="Inscription"><s:text name="inscription"/></s:a>
 </div>
 </body>

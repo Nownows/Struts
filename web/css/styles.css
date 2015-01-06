@@ -1,8 +1,13 @@
-* { margin: 0; padding: 0;}
+#menuGauche{
+    float: left;
+    width: 15%;
+    border-color:grey;
+}
 
-html, body {
-	margin: 0; 
-	text-align: center; 
+#menuDroit{
+    float: right;
+    width: 83%;
+    border-color:grey;
 }
 
 #enveloppe 
@@ -10,7 +15,7 @@ html, body {
 	position: relative; 
 	margin-left: 4%;
 	margin-top: 2%;
-	width: 700px;
+
 	text-align: left; 
 	background:#fefefe;
 	border-style:solid;
