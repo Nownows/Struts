@@ -1,7 +1,12 @@
 package metier;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Abonne {
 
+        @Id
 	private String identifiant;
 	private String motdepasse;
 	private String nom;

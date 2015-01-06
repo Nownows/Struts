@@ -11,6 +11,6 @@
     <!-- Drop and re-create the database schema on startup -->
     <property name="hbm2ddl.auto">create</property>
     <!-- Mapping files -->
-    <mapping class="metier.Abonne" package="metier" resource="metier/abonne.hbm.xml"/>
+    <mapping class="metier.Abonne"/>
   </session-factory>
 </hibernate-configuration>
