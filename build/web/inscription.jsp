@@ -1,8 +1,3 @@
-<%-- 
-    Document   : identification
-    Created on : 11 sept. 2014, 10:14:31
-    Author     : gilles
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
