@@ -43,7 +43,7 @@ public class ValiderIdentification extends ActionSupport implements ModelDriven 
     
     public String execute() throws Exception {
     uneSession = HibernateUtil.currentSession();
-        Abonne unAbon2 = (Abonne) uneSession.get(Abonne.class, unAbon.getIdentifiant());
+        Abonne unAbon2 = (Abonne) uneSession.get(Abonne.class, unAbon.getLogin());
         if (unAbon2==null)   
          { addActionError("L'abonné n'existe pas !");
             return INPUT;

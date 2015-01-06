@@ -4,6 +4,8 @@
  */
 package controle;
 
+import static com.opensymphony.xwork2.Action.INPUT;
+import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import java.util.Map;
@@ -13,7 +15,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 
-public class ValiderInscription extends ActionSupport implements ModelDriven, SessionAware {
+public class ValiderInscriptionEntreprise extends ActionSupport implements ModelDriven, SessionAware {
     
   private Abonne unAbon = new Abonne();
     
@@ -40,7 +42,7 @@ public class ValiderInscription extends ActionSupport implements ModelDriven, Se
     public String execute() throws Exception { 
          
         uneSession = HibernateUtil.currentSession();
-        Abonne unAbon2 = (Abonne) uneSession.get(Abonne.class, unAbon.getIdentifiant());
+        Abonne unAbon2 = (Abonne) uneSession.get(Abonne.class, unAbon.getLogin());
         if (unAbon2!=null)   
          { addActionError("L'abonné existe déjà !");
             return INPUT;
@@ -52,7 +54,7 @@ public class ValiderInscription extends ActionSupport implements ModelDriven, Se
         tx.commit();
         
         session.put("unAbon", unAbon);
-        System.out.println("Ajout dans l'annuaire de l'abonné : "+ ((Abonne) session.get("unAbon")).getNom());
+        System.out.println("Ajout dans l'annuaire de l'abonné : "+ ((Abonne) session.get("unAbon")).getLogin());
         return SUCCESS;
     }
     

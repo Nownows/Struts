@@ -3,13 +3,13 @@
 	"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
 
 <validators>
-    <field name="identifiant">  
+    <field name="login">  
         <field-validator type="requiredstring">       
         <message key="identifiant.required"/>
         </field-validator> 
     </field>
     
-    <field name="motdepasse">
+    <field name="mdp">
     	<field-validator type="requiredstring">
             <message>Le champ mot de passe est obligatoire</message>
         </field-validator> 

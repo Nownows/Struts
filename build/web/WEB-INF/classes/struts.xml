@@ -19,7 +19,12 @@
             <result name="success">/accueil.jsp</result>
         </action>
         
-        <action name="ValiderInscription" class="controle.ValiderInscription" >
+        <action name="ValiderInscriptionParticulier" class="controle.ValiderInscriptionParticulier" >
+            <result name="input">/inscription.jsp</result>
+            <result name="success">/accueil.jsp</result>
+        </action>
+        
+        <action name="ValiderInscriptionEntreprise" class="controle.ValiderInscriptionEntreprise" >
             <result name="input">/inscription.jsp</result>
             <result name="success">/accueil.jsp</result>
         </action>

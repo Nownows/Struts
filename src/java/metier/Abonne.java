@@ -6,42 +6,33 @@ import javax.persistence.Id;
 @Entity
 public class Abonne {
 
-        @Id
-	private String identifiant;
-	private String motdepasse;
-	private String nom;
-	private String prenom;
+    @Id
+    private String login;
+    private String mdp;
+    private String email;
 
-	public String getIdentifiant() {
-		return this.identifiant;
-	}
+    public String getLogin() {
+        return login;
+    }
 
-	public void setIdentifiant(String identifiant) {
-		this.identifiant = identifiant;
-	}
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
-	public String getMotdepasse() {
-		return this.motdepasse;
-	}
+    public String getMdp() {
+        return mdp;
+    }
 
-	public void setMotdepasse(String motdepasse) {
-		this.motdepasse = motdepasse;
-	}
+    public void setMdp(String mdp) {
+        this.mdp = mdp;
+    }
 
-	public String getNom() {
-		return this.nom;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return this.prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }

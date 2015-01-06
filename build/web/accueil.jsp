@@ -16,10 +16,8 @@
 <div id="enveloppe">
     <P> 
      <h4> <s:text name="accueil.label"/> </h4>
-          <s:text name="accueil.identifiant"/> : <s:property value="unAbon.identifiant"/> <br/>
-          <s:text name="accueil.motdepasse"/> : <s:property value="unAbon.motdepasse"/><br/>  
-          <s:text name="accueil.nom"/> : <s:property value="nom"/> <br/>
-          <s:text name="accueil.prenom"/> : <s:property value="prenom"/><br/> 
+          <s:text name="accueil.login"/> : <s:property value="unAbon.login"/> <br/>
+          <s:text name="accueil.mdp"/> : <s:property value="unAbon.mdp"/><br/>  
 </div>
 </body>
 </html>
