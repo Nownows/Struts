@@ -1,0 +1,17 @@
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+	"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+    <field name="unAbon.identifiant">
+        <field-validator type="requiredstring">
+            <message>Le champ identifiant est obligatoire</message>
+        </field-validator> 
+    </field>
+    <field name="unAbon.motdepasse">
+    	<field-validator type="requiredstring">
+            <message>Le champ mot de passe est obligatoire</message>
+        </field-validator>
+    </field>
+   
+</validators>
