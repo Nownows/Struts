@@ -9,18 +9,7 @@
     bonjour, <%= session.getAttribute("login") %>
 <%--<s:debug/>--%>
 <div id="enveloppe">
-    <ul>
-        <li>
-            <s:a action="ShowMessages"><s:text name="Voir les messages"/></s:a>
-        </li>
-        <li>
-           <s:a action="SendMessage"><s:text name="Envoyer un message"/></s:a>
-        </li>
-        <li>
-             <s:a action="ShowAbonnes"><s:text name="Consulter les abonnés"/></s:a>
-        </li>
-    </ul>
-
+    voir les messages
 </div>
 </body>
 </html>

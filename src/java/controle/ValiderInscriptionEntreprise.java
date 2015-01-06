@@ -53,8 +53,8 @@ public class ValiderInscriptionEntreprise extends ActionSupport implements Model
         uneSession.save(unAbon);
         tx.commit();
         
-        session.put("unAbon", unAbon);
-        System.out.println("Ajout dans l'annuaire de l'abonné : "+ ((Entreprise) session.get("unAbon")).getLogin());
+        session.put("login", unAbon.getLogin());
+        System.out.println("Ajout dans l'annuaire de l'abonné : "+ session.get("login"));
         return SUCCESS;
     }
     

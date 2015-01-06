@@ -1,9 +1,3 @@
-<%-- 
-    Document   : accueil
-    Created on : 11 sept. 2014, 13:11:17
-    Author     : gilles
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
@@ -12,12 +6,21 @@
 <style type="text/css">@import url(css/styles.css);</style>
 </head>
 <body>
+    bonjour, <%= session.getAttribute("login") %>
 <%--<s:debug/>--%>
 <div id="enveloppe">
-    <P> 
-     <h4> <s:text name="accueil.label"/> </h4>
-          <s:text name="accueil.login"/> : <s:property value="unAbon.login"/> <br/>
-          <s:text name="accueil.mdp"/> : <s:property value="unAbon.mdp"/><br/>  
+    <ul>
+        <li>
+            <s:a action="ShowMessages"><s:text name="Voir les messages"/></s:a>
+        </li>
+        <li>
+           <s:a action="SendMessage"><s:text name="Envoyer un message"/></s:a>
+        </li>
+        <li>
+             <s:a action="ShowAbonnes"><s:text name="Consulter les abonnés"/></s:a>
+        </li>
+    </ul>
+
 </div>
 </body>
 </html>

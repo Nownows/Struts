@@ -10,9 +10,22 @@
             <result>/identification.jsp</result>
         </action>
         
+        <action name="ShowMessages" >
+            <result>/showMessage.jsp</result>
+        </action>
+        
+        <action name="SendMessage" >
+            <result>/sendMessage.jsp</result>
+        </action>
+        
+        <action name="ShowAbonnes" >
+            <result>/showAbonnes.jsp</result>
+        </action>
+        
         <action name="Inscription" >
             <result>/inscription.jsp</result>
         </action>
+       
         
         <action name="ValiderIdentification" class="controle.ValiderIdentification" >
             <result name="input">/identification.jsp</result>
