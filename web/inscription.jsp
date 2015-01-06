@@ -23,16 +23,22 @@
             <td style="padding:20px">
                 <h3>Inscription Particulier</h3><br/>
                 <s:form method="post" action="ValiderInscriptionParticulier.action">
-		<s:textfield name="login"  type="email" label="Identifiant" cssClass="input"/>
+		<s:textfield name="login"   label="Login" cssClass="input"/>
                 <s:password name="mdp"  label="Mot de passe"  cssClass="input"/> 
+                <s:textfield name="email"  type="email" label="Email"  cssClass="input"/> 
+                <s:textfield name="nom"  label="Nom"  cssClass="input"/> 
+                <s:textfield name="prenom"  label="Prenom"  cssClass="input"/> 
+                
 		<s:submit value="Inscription"/>
                 </s:form> 
             </td>
             <td style="padding:20px">
                 <h3>Inscription Entreprise</h3><br/>
                 <s:form method="post" action="ValiderInscriptionEntreprise.action">
-		<s:textfield name="login"  type="email" label="Identifiant" cssClass="input"/>
+		<s:textfield name="login"  label="Login" cssClass="input"/>
                 <s:password name="mdp"  label="Mot de passe"  cssClass="input"/> 
+                <s:textfield name="email"  type="email" label="Email"  cssClass="input"/> 
+                <s:textfield name="raisonSociale"  label="Raison sociale"  cssClass="input"/> 
 		<s:submit value="Inscription"/>
                 </s:form> 
             </td>

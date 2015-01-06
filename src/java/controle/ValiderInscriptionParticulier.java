@@ -9,7 +9,7 @@ import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import java.util.Map;
-import metier.Abonne;
+import metier.Particulier;
 import org.apache.struts2.interceptor.SessionAware;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,7 +17,7 @@ import util.HibernateUtil;
 
 public class ValiderInscriptionParticulier extends ActionSupport implements ModelDriven, SessionAware {
     
-  private Abonne unAbon = new Abonne();
+  private Particulier unAbon = new Particulier();
     
   private Map<String, Object> session;
     private Session uneSession;
@@ -31,18 +31,18 @@ public class ValiderInscriptionParticulier extends ActionSupport implements Mode
         this.session = session;
     }
 
-    public Abonne getUnAbon() {
+    public Particulier getUnAbon() {
         return unAbon;
     }
 
-    public void setUnAbon(Abonne unAbon) {
+    public void setUnAbon(Particulier unAbon) {
         this.unAbon = unAbon;
     }
  
     public String execute() throws Exception { 
          
         uneSession = HibernateUtil.currentSession();
-        Abonne unAbon2 = (Abonne) uneSession.get(Abonne.class, unAbon.getLogin());
+        Particulier unAbon2 = (Particulier) uneSession.get(Particulier.class, unAbon.getLogin());
         if (unAbon2!=null)   
          { addActionError("L'abonné existe déjà !");
             return INPUT;
@@ -54,7 +54,7 @@ public class ValiderInscriptionParticulier extends ActionSupport implements Mode
         tx.commit();
         
         session.put("unAbon", unAbon);
-        System.out.println("Ajout dans l'annuaire de l'abonné : "+ ((Abonne) session.get("unAbon")).getLogin());
+        System.out.println("Ajout dans l'annuaire de l'abonné : "+ ((Particulier) session.get("unAbon")).getLogin());
         return SUCCESS;
     }
     

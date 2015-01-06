@@ -5,14 +5,28 @@
  */
 package metier;
 
+import javax.persistence.Entity;
+
 /**
  *
  * @author ASUS
  */
+@Entity
 public class Particulier extends Abonne{
     private String nom;
     private String prenom;
-    private String dateN;
+
+    public Particulier(String login, String mdp, String mail,String nom, String prenom) {
+        super(login,mdp,mail);
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+    
+    public Particulier(){
+        
+    }
+    
+    
 
     public String getNom() {
         return nom;
@@ -28,14 +42,6 @@ public class Particulier extends Abonne{
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
-    }
-
-    public String getDateN() {
-        return dateN;
-    }
-
-    public void setDateN(String dateN) {
-        this.dateN = dateN;
     }
 
 

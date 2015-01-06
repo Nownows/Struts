@@ -5,12 +5,24 @@
  */
 package metier;
 
+import javax.persistence.Entity;
+
 /**
  *
  * @author ASUS
  */
+@Entity
 public class Entreprise extends Abonne{
     private String raisonSociale;
+    
+    public Entreprise(String login, String mdp, String mail,String raisonSociale) {
+        super(login,mdp,mail);
+        this.raisonSociale = raisonSociale;
+    }
+    
+    public Entreprise(){
+        
+    }
 
     public String getRaisonSociale() {
         return raisonSociale;

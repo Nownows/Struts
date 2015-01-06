@@ -12,5 +12,7 @@
     <property name="hbm2ddl.auto">create</property>
     <!-- Mapping files -->
     <mapping class="metier.Abonne"/>
+    <mapping class="metier.Particulier"/>
+    <mapping class="metier.Entreprise"/>
   </session-factory>
 </hibernate-configuration>
