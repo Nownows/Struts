@@ -1,3 +1,8 @@
+<%@page import="metier.Message"%>
+<%@page import="java.util.List"%>
+<%@page import="org.hibernate.Transaction"%>
+<%@page import="org.hibernate.Session"%>
+<%@page import="util.HibernateUtil"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
@@ -24,8 +29,49 @@
                 </li>
             </ul>
         </div>
-        <div id="menuDroit">
-            Voir les messages
+        <div id="menuDroit" style="text-align: center;">
+            <h1> Les messages </h1>
+            <br/>
+            <table width="80%" >
+                <tr bgcolor="#CCCCCC" style="text-align:center;">
+                    <td>
+                        Login
+                    </td>
+                    <td>
+                        Message
+                    </td>
+                </tr>
+            
+        <%
+        Session uneSession = HibernateUtil.currentSession();       
+        List<Message> listMessage = uneSession.createCriteria(Message.class).list();
+        int i = 0;
+        for(Message message : listMessage ) {
+            i++;
+            if (i%2 == 0) {
+            %>
+                <%= "<tr bgcolor=\"#DDDDDD\">" %>
+                <% } 
+            else { %>
+            <%= "<tr bgcolor=\"#EEEEEE\">" %>
+            <% } %>
+                <td>
+                    <%= message.getAbonne().getLogin() %>
+                </td>
+                <td>
+                    <span>
+                        <%= message.getObjet() %>
+                    </span>
+                    <br/><br/>
+                    <span>
+                        <%= message.getCorps() %>
+                    </span>
+                </td>
+            </tr>
+            <%
+        }
+        %>
+            </table>
         </div>
     </body>
 </html>

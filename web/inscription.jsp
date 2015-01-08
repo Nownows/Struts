@@ -23,6 +23,7 @@
                 <s:textfield name="email"  type="email" label="Email"  cssClass="input"/> 
                 <s:textfield name="nom"  label="Nom"  cssClass="input"/> 
                 <s:textfield name="prenom"  label="Prenom"  cssClass="input"/> 
+                <s:textfield name="dateNaissance"  label="Date de naissance"  cssClass="input"/> 
                 
 		<s:submit value="Inscription"/>
                 </s:form> 
