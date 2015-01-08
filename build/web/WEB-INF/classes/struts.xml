@@ -46,11 +46,9 @@
             <result name="success">/accueil.jsp</result>
         </action>
         
-         <action name="ValiderMessage" class="controle.ValiderMessage">
+        <action name="ValiderMessage" class="controle.ValiderMessage">
             <result name="input">/showMessage.jsp</result>
             <result name="success">/showMessage.jsp</result>
         </action>
-        
-    
     </package>  
 </struts>

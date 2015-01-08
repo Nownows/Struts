@@ -5,14 +5,16 @@
 <validators>
     <field name="login">  
         <field-validator type="requiredstring">       
-        <message key="identifiant.required"/>
+            <message key="identifiant.required"/>
         </field-validator> 
     </field>
     
     <field name="mdp">
-    	<field-validator type="requiredstring">
-            <message>Le champ mot de passe est obligatoire</message>
-        </field-validator> 
+        <field-validator type="passwordvalidator">
+            <param name="specialCharacters">$!@#?</param>
+            <message>Le mot de passe doit contenir au moins 1 lettre, 1 chiffre, caractère "${specialCharacters}" et faire 8 caractères.
+            </message>
+        </field-validator>
     </field>
  
-  </validators>
+</validators>
