@@ -70,6 +70,13 @@
             </tr>
             <%
         }
+        if (i==0){
+            %>
+            <tr>
+                <td colspan="2" style="text-align: center;">Aucun message </td>
+            </tr>
+            <%
+        }
         %>
             </table>
         </div>

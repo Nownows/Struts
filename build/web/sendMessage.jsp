@@ -25,7 +25,12 @@
             </ul>
         </div>
         <div id="menuDroit">
-            Envoyer un message
+            <h2>Envoyer un message</h2>
+            <s:form method="post" action="ValiderMessage">
+		<s:textfield name="objet" id="objet" label="Objet" labelposition="top" cssClass="input"/>
+                <s:textarea cols="50" rows="10"  name="corps" id="corps" label="Corps" labelposition="top" cssClass="input"/>        
+		<s:submit value="Envoyer Le message"/>
+	</s:form>  
         </div>
     </body>
 </html>
