@@ -5,9 +5,11 @@
 package controle;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import java.util.Map;
+import metier.Abonne;
 import metier.Message;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
@@ -50,10 +52,15 @@ public class ValiderMessage extends ActionSupport implements ModelDriven, Sessio
     public String execute() throws Exception {
        uneSession = HibernateUtil.currentSession();
         tx = uneSession.beginTransaction();
-        
+     
+        String login = (String) ActionContext.getContext().getSession().get("login");
+      
+        Abonne a = new Abonne();
+        a.setLogin(login);
+        unMessage.setAbonne(a);
         uneSession.save(unMessage);
         tx.commit();
-        
+        sessionmap.put("id", unMessage.getId());
         return SUCCESS;
 
     }
@@ -64,6 +71,6 @@ public class ValiderMessage extends ActionSupport implements ModelDriven, Sessio
 
     public void setSession(Map map) {
         sessionmap = (SessionMap) map;
-        sessionmap.put("id", unMessage.getId());
+        
     }
 }

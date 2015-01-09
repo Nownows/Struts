@@ -6,6 +6,7 @@
 package metier;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,9 +25,9 @@ public class Message {
     private Long id;
     private String objet;
     private String corps;
-    @ManyToOne
-    @JoinColumn(name = "login")
-    private Abonne expediteur;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "login", nullable = false)
+    private Abonne abonne;
 
     public String getObjet() {
         return objet;
@@ -51,9 +52,16 @@ public class Message {
     public void setId(Long id) {
         this.id = id;
     }
-    
-    public Abonne getAbonne(){
-        return this.expediteur;
+
+    public Abonne getAbonne() {
+        return abonne;
     }
+
+    public void setAbonne(Abonne abonne) {
+        this.abonne = abonne;
+    }
+
+ 
+
 
 }

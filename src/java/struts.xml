@@ -47,7 +47,7 @@
         </action>
         
         <action name="ValiderMessage" class="controle.ValiderMessage">
-            <result name="input">/showMessage.jsp</result>
+            <result name="input">/sendMessage.jsp</result>
             <result name="success">/showMessage.jsp</result>
         </action>
     </package>  
