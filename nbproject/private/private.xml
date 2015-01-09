@@ -11,11 +11,16 @@
             <file>file:/F:/netbeans%20projects/projet/src/java/validators.xml</file>
         </group>
         <group name="Anciens TP">
-            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/controle/ValiderInscriptionParticulier.java</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/nbproject/build-impl.xml</file>
             <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/controle/ValiderMessage.java</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/web/identification.jsp</file>
             <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/controle/ValiderIdentification.java</file>
-            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/metier/Message.java</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/metier/Annuaire.java</file>
             <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/web/sendMessage.jsp</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/web/accueil.jsp</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/PasswordIntegrityValidator.java</file>
+            <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/src/java/struts.xml</file>
             <file>file:/C:/Users/Aethia/Desktop/M2/CWeb/Struts/Struts/web/inscription.jsp</file>
         </group>
     </open-files>
